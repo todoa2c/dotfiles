@@ -7,6 +7,7 @@ if has('win32') || has('win64')
 	set rtp+=~/$VIMFILE_DIR/bundle/cmigemo-default-win32/runtime " migemo
 else
 	:let $VIMFILE_DIR = '.vim'
+	:let mapleader="\"
 endif
 
 set rtp+=$GOROOT/misc/vim      " golang
@@ -30,9 +31,6 @@ NeoBundle 'FuzzyFinder'
 " non github repos
 NeoBundle 'git://git.wincent.com/command-t.git'
 " ...
-
-
-
 " ------ My Bundles --------
 NeoBundle 'unite.vim'
 NeoBundle 'taglist.vim'
@@ -64,17 +62,7 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'majutsushi/tagbar'
 
-" 現在まともに動いていない
-" NeoBundle 'ref.vim'
-" NeoBundle 'soh335/vim-ref-jquery'
-" NeoBundle 'Javascript-OmniCompletion-with-YUI-and-j'
-
-
 filetype plugin indent on     " required! 
-
-
-" --------------------------
-
 set nobk
 set tabstop=4
 set shiftwidth=4
@@ -195,12 +183,11 @@ au BufNewFile *.py set ft=python fenc=utf-8
 
 " Unite.vim
 noremap <C-_> :Unite -buffer-name=files buffer file_mru bookmark file<CR>
-" ファイルを開く時、ウィンドウを分割して開く
+" openes as split
 au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
 au FileType unite inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
 
 "" qfixhowm
-" MRU表示数
 let QFixHowm_MruFileMax = 30
 
 "" Golang
