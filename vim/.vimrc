@@ -70,6 +70,8 @@ set shiftwidth=4
 " ----- custom key binding -----
 nnoremap <Space>. :<C-u>sp $MYVIMRC<CR>
 nnoremap <Space>, :<C-u>source $MYVIMRC<CR>
+nnoremap <C-S-N> :cnext<CR>
+nnoremap <C-S-P> :cprevious<CR>
 " ------------------------------
 
 "js
