@@ -62,6 +62,7 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/syntastic.git'
+NeoBundle 'bling/vim-airline'
 
 filetype plugin indent on     " required! 
 set nobk
