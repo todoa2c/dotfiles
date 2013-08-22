@@ -63,6 +63,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'ervandew/supertab'
 
 filetype plugin indent on     " required! 
 set nobk
@@ -233,4 +234,7 @@ let g:tagbar_type_go = {
 
 " vim-airline
 let g:airline#extensions#whitespace#checks = []
+
+" supertab
+let g:SuperTabDefaultCompletionType = "context"
 
