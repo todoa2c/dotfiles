@@ -231,4 +231,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
+" vim-airline
+let g:airline#extensions#whitespace#checks = []
 
