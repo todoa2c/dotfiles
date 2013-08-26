@@ -62,7 +62,7 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/syntastic.git'
-NeoBundle 'bling/vim-airline'
+NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'Townk/vim-autoclose'
 
@@ -233,8 +233,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
-" vim-airline
-let g:airline#extensions#whitespace#checks = []
 
 " supertab
 let g:SuperTabDefaultCompletionType = "context"
