@@ -236,3 +236,6 @@ let g:tagbar_type_go = {
 
 " supertab
 let g:SuperTabDefaultCompletionType = "context"
+
+" ignore octal
+set nrformats=
