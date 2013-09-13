@@ -63,7 +63,6 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'ervandew/supertab'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'vim-scripts/Search-unFold'
 
