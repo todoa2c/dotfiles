@@ -49,7 +49,6 @@ NeoBundle 'fontzoom.vim'
 NeoBundle 'sequence'
 NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'dgryski/vim-godef'
-NeoBundle 'vim2hs'
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',
@@ -233,9 +232,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
-
-" supertab
-let g:SuperTabDefaultCompletionType = "context"
 
 " ignore octal
 set nrformats=
