@@ -64,6 +64,7 @@ NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'vim-scripts/Search-unFold'
+NeoBundle 'nvie/vim-flake8'
 
 filetype plugin indent on     " required! 
 set nobk
