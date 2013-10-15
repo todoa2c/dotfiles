@@ -67,9 +67,14 @@ NeoBundle 'todoa2c/Search-unFold'
 NeoBundle 'nvie/vim-flake8'
 
 filetype plugin indent on     " required! 
-set nobk
 set tabstop=4
 set shiftwidth=4
+" no backup or swap file
+set nobk
+set nowritebackup
+set noswapfile
+
+
 "
 " ----- custom key binding -----
 nnoremap <Space>. :<C-u>sp $MYVIMRC<CR>
