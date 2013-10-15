@@ -63,7 +63,7 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'vim-scripts/Search-unFold'
+NeoBundle 'todoa2c/Search-unFold'
 NeoBundle 'nvie/vim-flake8'
 
 filetype plugin indent on     " required! 
@@ -246,3 +246,7 @@ let g:tagbar_type_go = {
 
 " ignore octal
 set nrformats=
+
+" todoa2c/search-unFold: keep original cursor move for e key
+let g:sf_disable_expand_fold=1
+
