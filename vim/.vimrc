@@ -65,6 +65,7 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'todoa2c/Search-unFold'
 NeoBundle 'nvie/vim-flake8'
+NeoBundle 'thinca/vim-template'
 
 filetype plugin indent on     " required! 
 set tabstop=4
@@ -254,4 +255,17 @@ set nrformats=
 
 " todoa2c/search-unFold: keep original cursor move for e key
 let g:sf_disable_expand_fold=1
+
+" vim-template
+autocmd User plugin-template-loaded call s:template_keywords()
+function! s:template_keywords()
+    silent! %s/<+DATE+>/\=strftime('%Y-%m-%d')/g
+    silent! %s/<+FILENAME+>/\=expand('%:r')/g
+    silent! %s/<+PDIRNAME+>/\=expand('%:r')/g  " TODO: expand parent dir name
+endfunction
+" move to <+CURSOR+>
+autocmd User plugin-template-loaded
+    \   if search('<+CURSOR+>')
+    \ |   silent! execute 'normal! "_da>'
+    \ | endif
 
