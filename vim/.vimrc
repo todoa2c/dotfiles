@@ -34,7 +34,7 @@ NeoBundle 'git://git.wincent.com/command-t.git'
 " ------ My Bundles --------
 NeoBundle 'unite.vim'
 NeoBundle 'taglist.vim'
-NeoBundle 'Shougo/neocomplete.vim'
+NeoBundleLazy 'Shougo/neocomplete.vim', {"autoload": {"insert": 1}}
 NeoBundle 'Better-Javascript-Indentation'
 NeoBundle 'basyura/jslint.vim'
 NeoBundle 'molokai'
@@ -44,7 +44,7 @@ NeoBundle 'Source-Explorer-srcexpl.vim'
 NeoBundle 'trinity.vim'
 NeoBundle 'fuenor/qfixhowm'
 NeoBundle 'vcscommand.vim'
-NeoBundle 'mattn/emmet-vim'
+NeoBundleLazy 'mattn/emmet-vim', {"autoload": {"filetypes": ['html']}}
 NeoBundle 'fontzoom.vim'
 NeoBundle 'sequence'
 NeoBundle 'Blackrush/vim-gocode'
@@ -66,6 +66,20 @@ NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'todoa2c/Search-unFold'
 NeoBundle 'nvie/vim-flake8'
 NeoBundle 'thinca/vim-template'
+NeoBundleLazy "gregsexton/gitv", {
+      \ "depends": ["tpope/vim-fugitive"],
+      \ "autoload": {
+      \   "commands": ["Gitv"],
+      \ }}
+NeoBundleLazy "davidhalter/jedi-vim", {
+      \ "autoload": {
+      \   "filetypes": ["python", "python3", "djangohtml"],
+      \ },
+      \ "build": {
+      \   "mac": "pip install jedi",
+      \   "unix": "pip install jedi",
+      \ }}
+
 
 filetype plugin indent on     " required! 
 set tabstop=4
@@ -202,6 +216,14 @@ augroup END
 " Python
 au FileType python set ts=4 sw=4 expandtab omnifunc=pythoncomplete#Complete
 au BufNewFile *.py set ft=python fenc=utf-8
+let s:hooks = neobundle#get_hooks("jedi-vim")
+function! s:hooks.on_source(bundle)
+  " see http://lambdalisue.hatenablog.com/entry/2013/06/23/071344
+  let g:jedi#auto_vim_configuration = 0
+  let g:jedi#popup_select_first = 0
+  let g:jedi#rename_command = '<Leader>R'
+  let g:jedi#goto_assignments_command = '<Leader>G'
+endfunction
 
 " Unite.vim
 noremap <C-_> :Unite -buffer-name=files buffer file_mru bookmark file<CR>
