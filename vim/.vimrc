@@ -47,8 +47,8 @@ NeoBundle 'vcscommand.vim'
 NeoBundleLazy 'mattn/emmet-vim', {"autoload": {"filetypes": ['html']}}
 NeoBundle 'fontzoom.vim'
 NeoBundle 'sequence'
-NeoBundle 'Blackrush/vim-gocode'
-NeoBundle 'dgryski/vim-godef'
+NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
+NeoBundleLazy 'dgryski/vim-godef', {"autoload": {"filetypes": ['go']}}
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',
