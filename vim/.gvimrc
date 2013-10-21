@@ -18,3 +18,7 @@ colorscheme molokai
 " set guifont=Inconsolata:h12:cDEFAULT
 " set guifontwide=MigMix_1M:h12:cDEFAULT
 set guifont=Ricty:h12:cDEFAULT
+
+" hide toolbar
+set guioptions-=T
+
