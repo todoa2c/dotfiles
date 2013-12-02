@@ -84,7 +84,7 @@ NeoBundleLazy "davidhalter/jedi-vim", {
       \   "mac": "pip install jedi",
       \   "unix": "pip install jedi",
       \ }}
-
+NeoBundle 'istepura/vim-toolbar-icons-silk'
 
 filetype plugin indent on     " required! 
 set tabstop=4

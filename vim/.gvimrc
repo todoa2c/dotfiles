@@ -20,5 +20,5 @@ colorscheme molokai
 set guifont=Ricty:h12:cDEFAULT
 
 " hide toolbar
-set guioptions-=T
+" set guioptions-=T
 
