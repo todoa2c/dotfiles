@@ -85,6 +85,7 @@ NeoBundleLazy "davidhalter/jedi-vim", {
       \   "unix": "pip install jedi",
       \ }}
 NeoBundle 'istepura/vim-toolbar-icons-silk'
+NeoBundleLazy 'eagletmt/ghcmod-vim', {"autoload": {"filetypes": ['haskell']}}
 
 filetype plugin indent on     " required! 
 set tabstop=4
@@ -296,6 +297,10 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
+" ghcmod-vim 
+let g:haskell_jmacro  = 0
+let g:haskell_conceal = 0
+let g:haskell_multiline_strings = 1
 
 " ignore octal
 set nrformats=
