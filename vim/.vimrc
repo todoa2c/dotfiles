@@ -54,6 +54,7 @@ NeoBundle 'fontzoom.vim'
 NeoBundle 'sequence'
 NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 NeoBundleLazy 'dgryski/vim-godef', {"autoload": {"filetypes": ['go']}}
+NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',
