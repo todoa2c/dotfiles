@@ -36,7 +36,7 @@ NeoBundle 'unite.vim'
 NeoBundle 'taglist.vim'
 NeoBundleLazy 'Shougo/neocomplete.vim', {"autoload": {"insert": 1}}
 NeoBundleLazy "Shougo/neosnippet.vim", {
-      \ "depends": ["honza/vim-snippets"],
+      \ "depends": ["Shougo/neosnippet-snippets"],
       \ "autoload": {
       \   "insert": 1,
       \ }}
