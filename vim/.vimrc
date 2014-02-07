@@ -56,15 +56,17 @@ NeoBundle 'sequence'
 NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 NeoBundleLazy 'dgryski/vim-godef', {"autoload": {"filetypes": ['go']}}
 NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-" NeoBundle 'Shougo/echodoc'
+if has('mac')
+	NeoBundle 'Shougo/vimproc', {
+				\ 'build' : {
+				\     'windows' : 'make -f make_mingw32.mak',
+				\     'cygwin' : 'make -f make_cygwin.mak',
+				\     'mac' : 'make -f make_mac.mak',
+				\     'unix' : 'make -f make_unix.mak',
+				\    },
+				\ }
+endif
+NeoBundle 'Shougo/echodoc'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/syntastic.git'
