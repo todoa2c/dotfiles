@@ -104,6 +104,7 @@ set noswapfile
 " ----- custom key binding -----
 nnoremap <Space>. :<C-u>sp $MYVIMRC<CR>
 nnoremap <Space>, :<C-u>source $MYVIMRC<CR>
+nnoremap <Space>p :VimShellPop<CR>
 nnoremap <C-S-N> :cnext<CR>
 nnoremap <C-S-P> :cprevious<CR>
 " ------------------------------
