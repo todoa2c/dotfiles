@@ -90,6 +90,7 @@ NeoBundleLazy "davidhalter/jedi-vim", {
       \ }}
 NeoBundle 'istepura/vim-toolbar-icons-silk'
 NeoBundleLazy 'eagletmt/ghcmod-vim', {"autoload": {"filetypes": ['haskell']}}
+NeoBundleLazy 'elixir-lang/vim-elixir', {"autoload": {"filetypes": ['elixir']}}
 
 filetype plugin indent on     " required! 
 set tabstop=4
